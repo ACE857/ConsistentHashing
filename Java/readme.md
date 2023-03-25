@@ -64,14 +64,14 @@ key0 is stored on server 0. Now, key0 will be stored on server 4 because server 
 server it encounters by going clockwise from key0’s position on the ring. The other keys are
 not redistributed based on consistent hashing algorithm.
 
-![img.png](add_server.png/img.png)
+![img.png](assets/add_server.png/img.png)
 
 ### Remove a server
 When a server is removed, only a small fraction of keys require redistribution with consistent
 hashing. When server 1 is removed, only key1 must be remapped to server 2.
 The rest of the keys are unaffected.
 
-![img.png](remove_server.png/img.png)
+![img.png](assets/remove_server.png/img.png)
 
 ### Two issues in the basic approach
 Basic algo for CH is
@@ -116,4 +116,4 @@ In Figure 5-14, server 4 is added onto the ring. The affected range starts from 
 added node) and moves anticlockwise around the ring until a server is found (s3). Thus, keys
 located between s3 and s4 need to be redistributed to s4.
 
-![img.png](affected_keys.png/img.png)
+![img.png](assets/affected_keys.png/img.png)
